@@ -1,6 +1,7 @@
 name: Test
 
-on: [push, pull_request]
+on:
+  workflow_dispatch:
 
 jobs:
   test:
@@ -41,3 +42,4 @@ jobs:
         run: |
           yarn generate-licenses
           git reset --hard HEAD
+
