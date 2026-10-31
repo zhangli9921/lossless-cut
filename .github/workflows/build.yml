@@ -4,8 +4,6 @@ on:
   push:
     tags:
       - 'v*'
-  schedule:
-    - cron: '0 10 * * *'
   workflow_dispatch:
     inputs:
       tmate_enabled:
@@ -188,4 +186,5 @@ jobs:
           yarn upload-artifacts dist/LosslessCut-linux-armv7l.tar.bz2
           yarn upload-artifacts dist/LosslessCut-linux-x64.tar.bz2
           yarn upload-artifacts --name screenshot-linux.jpeg screenshot.jpeg
+
 
